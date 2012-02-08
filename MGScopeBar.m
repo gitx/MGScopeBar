@@ -702,7 +702,7 @@
 	[button setShowsBorderOnlyWhileMouseInside:YES];
 	if (image) {
 		[image setSize:NSMakeSize(SCOPE_BAR_BUTTON_IMAGE_SIZE, SCOPE_BAR_BUTTON_IMAGE_SIZE)];
-		[button setImagePosition:NSImageLeft];
+		[button setImagePosition:title ? NSImageLeft : NSImageOnly];
 		[button setImage:image];
 	}
 	[button sizeToFit];

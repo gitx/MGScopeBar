@@ -13,7 +13,6 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		AAE7857A1419184700A6955E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE785791419184700A6955E /* Cocoa.framework */; };
 		AAE785801419184700A6955E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAE7857E1419184700A6955E /* InfoPlist.strings */; };
-		AAE785841419184700A6955E /* MGScopeBarFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE785831419184700A6955E /* MGScopeBarFramework.m */; };
 		AAE78589141918A100A6955E /* MGScopeBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C9FB61170E8FF8810019B961 /* MGScopeBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAE7858A141918A100A6955E /* MGScopeBarDelegateProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9FB61190E8FF8810019B961 /* MGScopeBarDelegateProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAE7858B141918A100A6955E /* MGRecessedPopUpButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C95B43CE0EB73CE3008EE468 /* MGRecessedPopUpButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,8 +39,6 @@
 		AAE7857D1419184700A6955E /* MGScopeBarFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MGScopeBarFramework-Info.plist"; sourceTree = "<group>"; };
 		AAE7857F1419184700A6955E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AAE785811419184700A6955E /* MGScopeBarFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGScopeBarFramework-Prefix.pch"; sourceTree = "<group>"; };
-		AAE785821419184700A6955E /* MGScopeBarFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.objj.h; path = MGScopeBarFramework.h; sourceTree = "<group>"; };
-		AAE785831419184700A6955E /* MGScopeBarFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGScopeBarFramework.m; sourceTree = "<group>"; };
 		C95B43CE0EB73CE3008EE468 /* MGRecessedPopUpButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRecessedPopUpButtonCell.h; sourceTree = "<group>"; };
 		C95B43CF0EB73CE3008EE468 /* MGRecessedPopUpButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRecessedPopUpButtonCell.m; sourceTree = "<group>"; };
 		C9FB61130E8FF8360019B961 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -159,8 +156,6 @@
 		AAE7857B1419184700A6955E /* MGScopeBarFramework */ = {
 			isa = PBXGroup;
 			children = (
-				AAE785821419184700A6955E /* MGScopeBarFramework.h */,
-				AAE785831419184700A6955E /* MGScopeBarFramework.m */,
 				AAE7857C1419184700A6955E /* Supporting Files */,
 			);
 			path = MGScopeBarFramework;
@@ -303,7 +298,6 @@
 			files = (
 				AAE7858C141918B100A6955E /* MGScopeBar.m in Sources */,
 				AAE7858D141918B100A6955E /* MGRecessedPopUpButtonCell.m in Sources */,
-				AAE785841419184700A6955E /* MGScopeBarFramework.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
