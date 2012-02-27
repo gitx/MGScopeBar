@@ -48,5 +48,6 @@
  */
 
 - (BOOL) isItemSelectedWithIdentifier:(NSString*)identifier inGroup:(NSInteger)groupNumber;
+- (void)updateSelectedState:(BOOL)selected forItem:(NSString *)identifier inGroup:(int)groupNumber informDelegate:(BOOL)inform;
 
 @end
