@@ -400,7 +400,7 @@
 	NSButton *firstButton = nil;
 	if (menuMode) {
 		firstButton = [group objectForKey:GROUP_POPUP_BUTTON];
-	} else {
+	} else if ([[group objectForKey:GROUP_BUTTONS] count] > 0) {
 		firstButton = [[group objectForKey:GROUP_BUTTONS] objectAtIndex:0];
 	}
 	float leftLimit = NSMinX([firstButton frame]);
