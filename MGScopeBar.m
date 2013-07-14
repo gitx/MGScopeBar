@@ -141,7 +141,7 @@
 	
 	// Configure contents via delegate.
 	if (self.delegate && [delegate conformsToProtocol:@protocol(MGScopeBarDelegate)]) {
-		NSUInteger numGroups = [delegate numberOfGroupsInScopeBar:self];
+		int numGroups = [delegate numberOfGroupsInScopeBar:self];
 		
 		if (numGroups > 0) {
 			_separatorPositions = [[NSMutableArray alloc] initWithCapacity:numGroups];
