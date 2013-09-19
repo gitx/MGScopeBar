@@ -701,7 +701,7 @@
 	[[button cell] setHighlightsBy:NSCellIsBordered | NSCellIsInsetButton];
 	[button setShowsBorderOnlyWhileMouseInside:YES];
 	if (image) {
-		[image setSize:NSMakeSize(SCOPE_BAR_BUTTON_IMAGE_SIZE, SCOPE_BAR_BUTTON_IMAGE_SIZE)];
+//		[image setSize:NSMakeSize(SCOPE_BAR_BUTTON_IMAGE_SIZE, SCOPE_BAR_BUTTON_IMAGE_SIZE)];
 		[button setImagePosition:title ? NSImageLeft : NSImageOnly];
 		[button setImage:image];
 	}
