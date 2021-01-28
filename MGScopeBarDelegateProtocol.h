@@ -24,7 +24,7 @@ typedef enum _MGScopeBarGroupSelectionMode {
 // Note: all groupNumber parameters are zero-based.
 
 @required
-- (NSUInteger)numberOfGroupsInScopeBar:(MGScopeBar *)theScopeBar;
+- (NSInteger)numberOfGroupsInScopeBar:(MGScopeBar *)theScopeBar;
 - (NSArray *)scopeBar:(MGScopeBar *)theScopeBar itemIdentifiersForGroup:(NSInteger)groupNumber;
 - (NSString *)scopeBar:(MGScopeBar *)theScopeBar labelForGroup:(NSInteger)groupNumber; // return nil or an empty string for no label.
 - (MGScopeBarGroupSelectionMode)scopeBar:(MGScopeBar *)theScopeBar selectionModeForGroup:(NSInteger)groupNumber;

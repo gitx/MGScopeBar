@@ -61,9 +61,9 @@
 - (IBAction)scopeButtonClicked:(id)sender;
 - (NSButton *)getButtonForItem:(NSString *)identifier inGroup:(NSInteger)groupNumber; // returns relevant button/menu-item
 - (void)updateSelectedState:(BOOL)selected forItem:(NSString *)identifier inGroup:(NSInteger)groupNumber informDelegate:(BOOL)inform;
-- (NSButton *)buttonForItem:(NSString *)identifier inGroup:(NSInteger)groupNumber 
+- (NSButton *)buttonForItem:(NSString *)identifier inGroup:(NSInteger)groupNumber
 				  withTitle:(NSString *)title image:(NSImage *)image; // creates a new NSButton
-- (NSMenuItem *)menuItemForItem:(NSString *)identifier inGroup:(NSInteger)groupNumber 
+- (NSMenuItem *)menuItemForItem:(NSString *)identifier inGroup:(NSInteger)groupNumber
 					  withTitle:(NSString *)title image:(NSImage *)image; // creates a new NSMenuitem
 - (NSPopUpButton *)popupButtonForGroup:(NSDictionary *)group;
 - (void)setControl:(NSObject *)control forIdentifier:(NSString *)identifier inGroup:(NSInteger)groupNumber;
@@ -141,7 +141,7 @@
 	
 	// Configure contents via delegate.
 	if (self.delegate && [delegate conformsToProtocol:@protocol(MGScopeBarDelegate)]) {
-		NSUInteger numGroups = [delegate numberOfGroupsInScopeBar:self];
+		int numGroups = [delegate numberOfGroupsInScopeBar:self];
 		
 		if (numGroups > 0) {
 			_separatorPositions = [[NSMutableArray alloc] initWithCapacity:numGroups];
@@ -685,7 +685,7 @@
 }
 
 
-- (NSButton *)buttonForItem:(NSString *)identifier inGroup:(NSInteger)groupNumber 
+- (NSButton *)buttonForItem:(NSString *)identifier inGroup:(NSInteger)groupNumber
 				  withTitle:(NSString *)title image:(NSImage *)image
 {
 	NSRect ctrlRect = NSMakeRect(0, 0, 50, 20); // arbitrary size; will be resized later.

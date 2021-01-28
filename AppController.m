@@ -118,7 +118,7 @@
 #pragma mark MGScopeBarDelegate methods
 
 
-- (int)numberOfGroupsInScopeBar:(MGScopeBar *)theScopeBar
+- (NSInteger)numberOfGroupsInScopeBar:(MGScopeBar *)theScopeBar
 {
 	return [self.groups count];
 }
@@ -197,10 +197,10 @@
 		 forItem:(NSString *)identifier inGroup:(NSInteger)groupNumber
 {
 	// Display some text showing what just happened.
-	NSString *displayString = [NSString stringWithFormat:@"\"%@\" %@ in group %d.", 
+	NSString *displayString = [NSString stringWithFormat:@"\"%@\" %@ in group %@.",
 							   [self scopeBar:theScopeBar titleOfItem:identifier inGroup:groupNumber], 
 							   (selected) ? @"selected" : @"deselected", 
-							   groupNumber];
+							   @(groupNumber)];
 	[labelField setStringValue:displayString];
 	//NSLog(@"%@", displayString);
 }
