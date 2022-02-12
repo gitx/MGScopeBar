@@ -19,5 +19,5 @@ jobs:
       - name: Set XCode Version
         run: sudo xcode-select -s /Applications/${{ matrix.xcode }}.app
       - name: Build project
-        run: set -o pipefail && xcodebuild -workspace MGScopeBar.xcodeproj/project.xcworkspace -scheme MGScopeBar archive | xcpretty
+        run: xcodebuild -workspace MGScopeBar.xcodeproj/project.xcworkspace -scheme MGScopeBar archive ARCHS="arm64 x86_64"
 
