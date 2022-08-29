@@ -10,7 +10,7 @@
 #import "MGScopeBarDelegateProtocol.h"
 
 @interface MGScopeBar : NSView {
-	IBOutlet id <MGScopeBarDelegate, NSObject> delegate; // weak ref.
+	IBOutlet __unsafe_unretained id <MGScopeBarDelegate, NSObject> delegate; // weak ref.
 	NSMutableArray *_separatorPositions; // x-coords of separators, indexed by their group-number.
 	NSMutableArray *_groups; // groups of items.
 	NSView *_accessoryView; // weak ref since it's a subview.
