@@ -22,5 +22,4 @@ jobs:
         with:
           xcode-version: ${{ matrix.xcode }}
       - name: Build project
-        run: xcodebuild -workspace MGScopeBar.xcodeproj/project.xcworkspace -scheme MGScopeBar archive ARCHS="arm64 x86_64"
-
+        run: xcodebuild -project MGScopeBar.xcodeproj -scheme MGScopeBar.framework build ARCHS="arm64 x86_64" CODE_SIGNING_ALLOWED=NO
