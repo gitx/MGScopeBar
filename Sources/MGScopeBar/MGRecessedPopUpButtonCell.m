@@ -26,14 +26,6 @@
 	return self;
 }
 
-
-- (void)dealloc
-{
-	[recessedButton release];
-	[super dealloc];
-}
-
-
 - (void)drawTitleWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
 	// Inset title rect since its position is broken when NSPopUpButton
