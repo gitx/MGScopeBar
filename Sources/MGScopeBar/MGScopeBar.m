@@ -10,20 +10,30 @@
 #import "MGRecessedPopUpButtonCell.h"
 
 
+static NSColor *MGScopeBarWhite(CGFloat lightWhite, CGFloat darkWhite)
+{
+	return [NSColor colorWithName:nil dynamicProvider:^NSColor *(NSAppearance *appearance) {
+		NSAppearanceName name = [appearance bestMatchFromAppearancesWithNames:@[NSAppearanceNameAqua, NSAppearanceNameDarkAqua]];
+		CGFloat white = [name isEqualToString:NSAppearanceNameDarkAqua] ? darkWhite : lightWhite;
+		return [NSColor colorWithCalibratedWhite:white alpha:1.0];
+	}];
+}
+
+
 #define SCOPE_BAR_H_INSET				8.0																		// inset on left and right
 #define SCOPE_BAR_HEIGHT				25.0																	// used in -sizeToFit
-#define SCOPE_BAR_START_COLOR_GRAY		[NSColor colorWithCalibratedWhite:0.75 alpha:1.0]						// bottom color of gray gradient
-#define SCOPE_BAR_END_COLOR_GRAY		[NSColor colorWithCalibratedWhite:0.90 alpha:1.0]						// top color of gray gradient
+#define SCOPE_BAR_START_COLOR_GRAY		MGScopeBarWhite(0.75, 0.19)												// bottom color of gray gradient
+#define SCOPE_BAR_END_COLOR_GRAY		MGScopeBarWhite(0.90, 0.25)												// top color of gray gradient
 #define SCOPE_BAR_START_COLOR_BLUE		[NSColor colorWithCalibratedRed:0.71 green:0.75 blue:0.81 alpha:1.0]	// bottom color of blue gradient
 #define SCOPE_BAR_END_COLOR_BLUE		[NSColor colorWithCalibratedRed:0.80 green:0.82 blue:0.87 alpha:1.0]	// top color of blue gradient
-#define SCOPE_BAR_BORDER_COLOR			[NSColor colorWithCalibratedWhite:0.69 alpha:1.0]						// bottom line's color
+#define SCOPE_BAR_BORDER_COLOR			MGScopeBarWhite(0.69, 0.10)												// bottom line's color
 #define SCOPE_BAR_BORDER_WIDTH			1.0																		// bottom line's width
 
-#define SCOPE_BAR_SEPARATOR_COLOR		[NSColor colorWithCalibratedWhite:0.52 alpha:1.0]	// color of vertical-line separators between groups
+#define SCOPE_BAR_SEPARATOR_COLOR		MGScopeBarWhite(0.52, 0.40)							// color of vertical-line separators between groups
 #define SCOPE_BAR_SEPARATOR_WIDTH		1.0													// width of vertical-line separators between groups
 #define SCOPE_BAR_SEPARATOR_HEIGHT		16.0												// separators are vertically centered in the bar
 
-#define SCOPE_BAR_LABEL_COLOR			[NSColor colorWithCalibratedWhite:0.45 alpha:1.0]	// color of groups' labels
+#define SCOPE_BAR_LABEL_COLOR			MGScopeBarWhite(0.45, 0.62)							// color of groups' labels
 #define SCOPE_BAR_FONTSIZE				12.0												// font-size of labels and buttons
 #define SCOPE_BAR_ITEM_SPACING			6.0													// spacing between buttons/separators/labels
 #define SCOPE_BAR_BUTTON_IMAGE_SIZE		16.0												// size of buttons' images (width and height)
